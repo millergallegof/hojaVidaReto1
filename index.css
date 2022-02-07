@@ -1,0 +1,242 @@
+:root{
+    --color-primario: rgba(30, 46, 67, 0.618);
+    --color-secundario: rgba(46, 90, 46, 0.878);
+    --skills-bar-lenght: 0%;
+}
+
+p{
+    margin: 8px;
+}
+
+h3{
+    margin: 5px;
+}
+
+h4{
+    margin: 5px;
+}
+
+
+hr{
+    margin: 0px;
+    border-width: 3px;
+    
+}
+
+div {
+    display: block;
+    position: relative;		
+    margin: 10px;
+  }
+
+
+div.imagen{
+    
+    width: 280px;
+    height: 373,33px;
+}
+
+div.foto {
+    background-color: var(--color-primario);
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    height: 100px;
+    z-index: 1;
+  }
+
+
+  div.head{
+    display: flex;
+    margin: 0;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    color: white;
+    
+  }
+
+div.img1{
+    margin-top: 5px;
+    
+    display: flex;
+    height: 50px;
+    color: black;
+    align-items: center;
+    
+
+}
+
+.imgHead{
+    display: flex;
+    margin: 0;
+    height: 100%;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secundario);
+
+}
+.txtHead{
+    background-color: var(--color-primario);
+    display: flex;
+    height: 50px;
+    width: 100%;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+}
+.barras{
+    /* cuando se utiliza padding y se da 2 valores el primero es en vertical | y el segundo en horizontal - */
+    margin: 0px;
+    padding: 2px 0;
+    height: 250px;
+}
+
+.skillsItem{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.skillsBarra,
+.skillsBarra::after{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 280px;
+    height: 15px;
+    background-color: var(--color-primario);
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.skillsBarra::after{
+    content: "";
+    position: absolute;
+    left: -280px;
+    background-color: var(--color-secundario);
+    animation: skillsBarra 2s ease-in-out forwards;
+
+}
+
+.barraLargo-1::after{
+    --skills-bar-lenght: 10%;
+}
+
+.barraLargo-2::after{
+    --skills-bar-lenght: 20%;
+}
+
+.barraLargo-3::after{
+    --skills-bar-lenght: 30%;
+}
+
+.barraLargo-4::after{
+    --skills-bar-lenght: 40%;
+}
+
+.barraLargo-5::after{
+    --skills-bar-lenght: 50%;
+}
+
+.barraLargo-6::after{
+    --skills-bar-lenght: 60%;
+}
+
+.barraLargo-7::after{
+    --skills-bar-lenght: 70%;
+}
+
+.barraLargo-8::after{
+    --skills-bar-lenght: 80%;
+}
+
+.barraLargo-9::after{
+    --skills-bar-lenght: 90%;
+}
+
+.barraLargo-10::after{
+    --skills-bar-lenght: 100%;
+}
+
+.cuerpo{
+    display: flex;
+    margin: 5px;
+}
+
+.txt{
+    width: 300px;
+    display: flex;
+    margin: 0;
+    justify-content: flex-start;
+}
+.txt2{
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;
+}
+
+
+.time{
+    width: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;
+    align-content: flex-end;
+    color: var(--color-secundario);
+
+}
+
+
+
+.contenido{
+   
+    margin: 0px;
+}
+
+  #fotoMiller{
+    position: relative;
+    
+}
+
+.hojaVida{
+    display: flex;
+}
+
+.parte1{
+    width: 400px;
+}
+
+#imgContacto{
+    display: flex;
+    margin: 0;
+    height: 100%;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.248);
+}
+
+#txtContacto{
+    margin-left: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+@keyframes skillsBarra{
+    to{
+        transform: translateX(var(--skills-bar-lenght));
+    }
+}
