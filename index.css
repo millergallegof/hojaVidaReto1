@@ -2,7 +2,7 @@
     --color-primario: rgba(30, 46, 67, 0.618);
     --color-secundario: rgba(46, 90, 46, 0.878);
     --color-tres: rgba(160, 89, 89, 0.659);
-    --color-cuatro: rgba(184, 186, 113, 0.659);
+    --color-cuatro: rgba(147, 150, 68, 0.755);
     --color-cinco: #29449da8;
     --skills-bar-lenght: 0%;
 }
@@ -350,6 +350,15 @@ div.img1{
     display: flex;
     margin: 5px;
 }
+.cuerpo6{
+    width: 100%;
+    display: flex;
+    margin: 5px;
+}
+
+.cuerpo1, .cuerpo2, .cuerpo3, .cuerpo4, .cuerpo5{
+    margin: 5px;
+}
 
 .txt{
     width: 300px;
@@ -358,6 +367,7 @@ div.img1{
     justify-content: flex-start;
 }
 .txt2{
+    width: 100%;
     display: flex;
     margin: 0;
     justify-content: flex-end;
