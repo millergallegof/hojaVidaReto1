@@ -1,6 +1,9 @@
 :root{
     --color-primario: rgba(30, 46, 67, 0.618);
     --color-secundario: rgba(46, 90, 46, 0.878);
+    --color-tres: rgba(160, 89, 89, 0.659);
+    --color-cuatro: rgba(184, 186, 113, 0.659);
+    --color-cinco: #29449da8;
     --skills-bar-lenght: 0%;
 }
 
@@ -20,7 +23,15 @@ h4{
 hr{
     margin: 0px;
     border-width: 3px;
-    
+ }
+
+ ul{
+    list-style-type: none;
+    margin: 0;
+    padding-top: 0;
+    padding-left: 2px;
+    position: absolute;
+    z-index: 2;
 }
 
 div {
@@ -29,10 +40,69 @@ div {
     margin: 10px;
   }
 
+li::before{
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    
+    
+}
+
+.lista li:hover {
+    background-color: rgba(240, 248, 255, 0.467);
+}
+.lista > li{
+    float: left;
+    
+}
+
+.lista li ul{
+    display: none;
+    position: absolute;
+}
+
+.lista li:hover > ul{
+    display: block;
+
+}
+
+li#elementoPadre::before{
+    background-color:var(--color-primario);
+}
+
+li#elemento1::before{
+    background-color: var(--color-secundario);
+}
+li#elemento2::before{
+    background-color: var(--color-tres);
+}
+li#elemento3::before{
+    background-color: var(--color-cuatro);
+}
+li#elemento4::before{
+    background-color: var(--color-cinco);
+}
+
+.hrColor1{
+    border-color: var(--color-secundario);
+}
+
+.hrColor2{
+    border-color: var(--color-tres);
+}
+.hrColor3{
+    border-color: var(--color-cuatro);
+}
+.hrColor4{
+    border-color: var(--color-cinco);
+}
 
 div.imagen{
-    
-    width: 280px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    width: 100%;
     height: 373,33px;
 }
 
@@ -40,7 +110,7 @@ div.foto {
     background-color: var(--color-primario);
     display: block;
     position: absolute;
-    bottom: 3px;
+    bottom: 0px;
     margin: 0px;
     padding: 0px;
     font-size: 30px;
@@ -50,6 +120,14 @@ div.foto {
     z-index: 1;
   }
 
+.profile{
+    width: 100%;
+    /* padding: 5px; */
+}
+
+.skills{
+    width: 100%;
+}
 
   div.head{
     display: flex;
@@ -72,7 +150,7 @@ div.img1{
 
 }
 
-.imgHead{
+.imgHeadColor1{
     display: flex;
     margin: 0;
     height: 100%;
@@ -80,8 +158,38 @@ div.img1{
     align-items: center;
     justify-content: center;
     background-color: var(--color-secundario);
-
 }
+
+.imgHeadColor2{
+    display: flex;
+    margin: 0;
+    height: 100%;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-tres);
+}
+
+.imgHeadColor3{
+    display: flex;
+    margin: 0;
+    height: 100%;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-cuatro);
+}
+
+.imgHeadColor4{
+    display: flex;
+    margin: 0;
+    height: 100%;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-cinco);
+}
+
 .txtHead{
     background-color: var(--color-primario);
     display: flex;
@@ -91,6 +199,7 @@ div.img1{
     align-items: center;
     justify-content: center;
 }
+
 .barras{
     /* cuando se utiliza padding y se da 2 valores el primero es en vertical | y el segundo en horizontal - */
     margin: 0px;
@@ -105,8 +214,8 @@ div.img1{
     flex-direction: column;
 }
 
-.skillsBarra,
-.skillsBarra::after{
+.skillsBarraColor1,
+.skillsBarraColor1::after{
     position: relative;
     padding: 0;
     margin: 0;
@@ -119,11 +228,80 @@ div.img1{
 
 }
 
-.skillsBarra::after{
+.skillsBarraColor1::after{
     content: "";
     position: absolute;
     left: -280px;
     background-color: var(--color-secundario);
+    animation: skillsBarra 2s ease-in-out forwards;
+
+}
+
+.skillsBarraColor2,
+.skillsBarraColor2::after{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 280px;
+    height: 15px;
+    background-color: var(--color-primario);
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.skillsBarraColor2::after{
+    content: "";
+    position: absolute;
+    left: -280px;
+    background-color: var(--color-tres);
+    animation: skillsBarra 2s ease-in-out forwards;
+
+}
+
+.skillsBarraColor3,
+.skillsBarraColor3::after{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 280px;
+    height: 15px;
+    background-color: var(--color-primario);
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.skillsBarraColor3::after{
+    content: "";
+    position: absolute;
+    left: -280px;
+    background-color: var(--color-cuatro);
+    animation: skillsBarra 2s ease-in-out forwards;
+
+}
+
+.skillsBarraColor4,
+.skillsBarraColor4::after{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 280px;
+    height: 15px;
+    background-color: var(--color-primario);
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.skillsBarraColor4::after{
+    content: "";
+    position: absolute;
+    left: -280px;
+    background-color: var(--color-cinco);
     animation: skillsBarra 2s ease-in-out forwards;
 
 }
@@ -186,7 +364,7 @@ div.img1{
 }
 
 
-.time{
+.timeColor1{
     width: 100%;
     display: flex;
     margin: 0;
@@ -196,7 +374,35 @@ div.img1{
 
 }
 
+.timeColor2{
+    width: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;
+    align-content: flex-end;
+    color: var(--color-tres);
 
+}
+
+.timeColor3{
+    width: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;
+    align-content: flex-end;
+    color: var(--color-cuatro);
+
+}
+
+.timeColor4{
+    width: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;
+    align-content: flex-end;
+    color: var(--color-cinco);
+
+}
 
 .contenido{
    
